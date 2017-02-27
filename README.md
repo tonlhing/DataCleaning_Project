@@ -17,8 +17,8 @@ It has one parameter which is the directory path that HARS data set is located. 
 6. Then, for each row of newly data frame in 5., collect corresponding activity from subject number and add them as two more columns in data frame. Note that activity is converted to one of six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
 7. Step 4-6 is done similarly for "test" data.
 8. Two newly data frames from "train" and "test" data resulted from step 4-7 are combined into one data frame called "combine_data".
-9. Corresponding column labels are assigned to "combinedDataSet" data set. First 79 columns are labeled as shown in MeanStdfeature.txt and last two columns are labels as activity and subject_no, respectively.
-10. Based on combinedDataSet data set, average values of each column for each activity and each subject are computed. Then, "avg_data" data frame is created based on resultd average values.
+9. Corresponding column labels are assigned to "combine_data" data frame. First 79 columns are labeled as shown in ./DataDict/MeanStdfeature.txt and last two columns are labels as activity and subject_no, respectively.
+10. Based on "combine_data" data frame, average values of each column for each activity and each subject are computed. Then, "avg_data" data frame is created based on resultd average values.
 11. New data frame called "NewDataSet" is created. It is a list composes of two data frames, "combine_data" and "avg_data".
-12. "combine_data" data frame is used to create "combinedDataSet.csv". See combinedDataSet-Dict.txt for more information.
-13. "avg_data" data frame is used to create "averageDataSet.csv". See averageDataSet-Dict.txt for more information.
+12. "combine_data" data frame is used to create "combinedDataSet.csv". See ./DataDict/combinedDataSet-Dict.txt for more information.
+13. "avg_data" data frame is used to create "averageDataSet.csv". See ./DataDict/averageDataSet-Dict.txt for more information.

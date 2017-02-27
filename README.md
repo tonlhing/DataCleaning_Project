@@ -1,2 +1,29 @@
 # DataCleaning_Project
-Project Assignment for (Coursera) Data Cleaning -- Wisarn Patchoo
+# Project Assignment for (Coursera) Data Cleaning -- Wisarn Patchoo
+
+This "run_analysis.R" script is for Peer-graded Assignment of week-IV in "Johns Hopkins University  Getting and Cleaning Data Cleaning" course. It processes data from "Human Activity Recognition Using Smartphones Dataset Version 1.0" by Jorge L. Reyes-Ortiz, et. al., See <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
+for more information. For future reference, denote that data set as "HARS data set" to create two tidy data set.
+
+- averageDataSet: See averageDataSet-Dict.txt for more information
+- combinedDataSet See combinedDataSet-Dict.txt for more information
+
+It has one parameter which is the directory path that HARS data set is located. The following detail describes the operations that are done by the script.
+
+1. Load "dplyr" package for processing data frame.
+2. Set appropriate working directory.
+3. Load all datasets (subject_train, X_train, y_train, subject_test, X_test, y_test, activity_label, features)
+
+Step 4-6 are done for both "train" and "test" data
+-------------------------------------------
+4. Obtain column indices corresponds to mean and standard deviation features (46 columns for "train" data and 33 columns for "test" data)
+5. Create data frame based on collected indices.
+6. Then, for each row of newly data frame in 5., collect corresponding activity from subject number and add them as two more columns in data frame. Note that activity is converted to one of six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
+-------------------------------------------
+
+7. Two newly data frames from "train" and "test" data resulted from step 4-6 are combined into one data frame called "combine_data".
+8. Corresponding column labels are assigned to "combinedDataSet" data set. First 79 columns are labeled as shown in MeanStdfeature.txt and last two columns are labels as activity and subject_no, respectively.
+9. Based on combinedDataSet data set, average values of each column for each activity and 
+each subject are computed. Then, "avg_data" data frame is created based on resultd average values.
+10. New data frame called "NewDataSet" is created. It is a list composes of two data frames, "combine_data" and "avg_data".
+11. "combine_data" data frame is used to create "combinedDataSet.csv". See combinedDataSet-Dict.txt for more information.
+12. "avg_data" data frame is used to create "averageDataSet.csv". See averageDataSet-Dict.txt for more information.

@@ -94,10 +94,10 @@ run_analysis <- function(workDir) {
     
     ## export resulted data set ##
     # combined data set #
-    write.csv(rrr$CombinedData, "combinedDataSet.csv", row.names = FALSE)
+    write.table(rrr$CombinedData, "combinedDataSet.txt", row.names = FALSE, sep = " ")
     
     # average data set #
-    write.csv(rrr$AvgData, "averageDataSet.csv", row.names = FALSE)
+    write.table(rrr$AvgData, "averageDataSet.txt", row.names = FALSE, sep = " ")
     
     return (NewDataSet)
     

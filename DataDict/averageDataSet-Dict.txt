@@ -1,0 +1,16 @@
+==================================================================
+DATASET : averageDataSet
+==================================================================
+This data set is derived from "combinedDataSet" data set. See combinedDataSet-Dict.txt 
+for more information. Average of each variable for each activity and each subject in 
+"combinedDataSet" data set are computed and used in this data set.
+
+- first 79 columns : average value of 79 variables for each activity and 
+each subject in "combinedDataSet" data set. See MeanStdfeature.txt for labeling of each variable.
+
+- activity: There are six possible activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING). See combinedDataSet-Dict.txt for more information. 
+
+- subject_no: subject number who performed the activity for each measurement. Its range is 
+from 1 to 30. See combinedDataSet-Dict.txt for more information. 
+ 
+

@@ -1,3 +1,13 @@
+==================================================================
+DATASET : combinedDataSet
+==================================================================
+This data set is derived from "Human Activity Recognition Using Smartphones Dataset
+Version 1.0" by Jorge L. Reyes-Ortiz, et. al., See <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
+for more information. For future reference, denote that data set as "HARS data set".
+Mean and stadard deviation features from train data and test data from on HARS data set
+are collected and combined into this data set.
+
+- first 46 columns : mean features from HARS data set
 tBodyAcc-mean()-X
 tBodyAcc-mean()-Y
 tBodyAcc-mean()-Z
@@ -44,6 +54,8 @@ fBodyBodyGyroMag-mean()
 fBodyBodyGyroMag-meanFreq()
 fBodyBodyGyroJerkMag-mean()
 fBodyBodyGyroJerkMag-meanFreq()
+
+- next 33 columns : standard deviation features from HARS data set 
 tBodyAcc-std()-X
 tBodyAcc-std()-Y
 tBodyAcc-std()-Z
@@ -77,3 +89,11 @@ fBodyAccMag-std()
 fBodyBodyAccJerkMag-std()
 fBodyBodyGyroMag-std()
 fBodyBodyGyroJerkMag-std()
+
+See all mean and stadard deviation features collected from HARS data set in MeanStdfeature.txt
+
+- activity: activity that persons perform while features are collected. There are six possible activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
+
+- subject_no: subject number who performed the activity for each measurement. Its range is from 1 to 30.
+ 
+
